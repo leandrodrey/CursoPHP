@@ -12,4 +12,8 @@
  *  Commit your results in your fork.
  */
 
-$name ='';
+$name ='Lean';
+
+echo 'Hello world! my name is' . $name;
+
+echo "/n Hello world! my name is {$name}";
