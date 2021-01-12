@@ -11,3 +11,10 @@
  *
  *  Commit your result in your fork
  */
+
+$person = ["Mariano"=>"32", "Matu"=>"35", "Giselle"=>"29"];
+
+foreach ($person as $x => $value) {
+    echo "La edad de $x es $value<br>";
+}
+

@@ -12,7 +12,19 @@
 
 $input = ["John","Mike","Adam","Richard","Martin","Sven"];
 
+for ($i = 0; $i <= count($input); $i++) {
+    if ($input[$i] == "Martin") {
+        $position = $i + 1;
+        echo "I found Martin, he is the number $position";
+    }
+}
 
+foreach($input as $key => $value) {
+    if ($value == "Martin") {
+        $position = $key + 1;
+        echo "I found Martin, he is the number $position";
+    }
+}
 
 /**
  * E3 B)
@@ -48,3 +60,15 @@ $products = [
     "Brown shirt" => "Shirts", "Baseball hat" => "Hats",
     "Skate shoes" => "Shoes", "Trecking shoes"
 ];
+
+foreach ($products as $value => $category) {
+    if ($category == "Shoes") {
+        echo "$value of category: $category, will have a discount of : 10 percent. <br>";
+    } elseif ($category == "Shirts") {
+        echo "$value of category: $category, will have a discount of : 15 percent. <br>";
+    } elseif ($category == "Hats") {
+        echo "$value of category: $category, will have a discount of : 5 percent. <br>";
+    } else {
+        echo "$value of category: $category, will have no discount. <br>";
+    }
+}
