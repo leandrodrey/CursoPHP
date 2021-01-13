@@ -29,12 +29,57 @@ When working with interfaces you have to think the following:
 
 _I don't care who you actually are, or where do you come from as long as you can do what I need_
 
+Interfaces will allow you to model behaviour without the need of inheritance, objects from different class families can have the same behaviour and type hinted as implementors of the interface. 
+
+
+```php
+interface Greeter{
+    public function sayHello() : string;
+}
+
+abstract class Animal {
+}
+
+class Human extends Animal implements Greeter {
+
+    public function sayHello() : string {
+        return "hello";
+    }
+}
+
+class Alien implements Greeter
+{
+    public function sayHello() : string {
+        return "Term tonk'peh";
+    }
+}
+
+$human = new Human();
+$alien = new Alien();
+
+greet($human);
+greet($alien);
+
+function greet(Greeter $greeter)
+{
+    echo $greeter->sayHello() . "\n";
+}
+```
+
+### UML Class Diagram
+
+<div>
+<img src="Diagrams/Interfaces.jpeg" width="500" height="300"/>
+</div>
+
+
 ### Real world example
 
 Let's suppose that you have to log what's happening in your code and your company decided to have two different loggers
 
 1. A logger that will write an output in the console if you are in a development environment.
 2. A logger that will write the output to a file if you are in production mode.
+
 
 
 ```php
