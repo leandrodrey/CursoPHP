@@ -4,9 +4,38 @@
  *  Complete the classes below and add the necessary code for the example to work.
  */
 
-class Triangle {}
-class Square {}
-class Circle {}
+abstract class formaGeometrica {
+
+    public function getArea() {
+    }
+
+    public function getPerimeter() {
+    }
+}
+
+class Triangle extends formaGeometrica {
+}
+
+class Square extends formaGeometrica  {
+
+    private $lado;
+
+    public function __construct(int $lado) {
+        $this->lado = $lado;
+    }
+
+    public function getArea() {
+        return $area = $this->lado * $this->lado;
+    }
+
+    public function getPerimeter() {
+        return $perimeter = $this->lado * 4;
+    }
+}
+
+class Circle extends formaGeometrica  {
+
+}
 
 $triangle = new Triangle(2, 3, 5);
 $square = new Square(2);
