@@ -24,15 +24,16 @@ echo $matu->sayHello() . "\n \n";
  * What is the output of this class ?
  *
  * Your answer:
+ * Hello, my name is Mariano
+ * Hello, my name is Matu
  *
  *
  * Did it suffer any changes from it latest versions?
  *
- * Your answer:
- *
+ * Your answer: Ahora por defecto vamos a tener el saludo guardado en un atributo estatico. Usamos self:: para acceder al valor de este atributo. Esto permitiría que se cambie el saludo por defecto.
  *
  * Did the behaviour remain the same ?
  *
- * Your answer:
+ * Your answer: Sí
  *
  */
