@@ -72,3 +72,23 @@ foreach ($products as $value => $category) {
         echo "$value of category: $category, will have no discount. <br>";
     }
 }
+
+foreach ($products as $value => $category) {
+    switch($category){
+        case 'Shoes';
+        echo "$value of category: $category, will have a discount of : 10 percent. <br>";
+        break;
+
+        case 'Shirts';
+        echo "$value of category: $category, will have a discount of : 15 percent. <br>";
+        break;
+
+        case 'Hats';
+        echo "$value of category: $category, will have a discount of : 5 percent. <br>";
+        break;
+
+        default:
+        echo "$value of category: $category, will have no discount. <br>";
+
+    }
+}

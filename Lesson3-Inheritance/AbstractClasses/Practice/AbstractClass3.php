@@ -14,6 +14,24 @@ abstract class formaGeometrica {
 }
 
 class Triangle extends formaGeometrica {
+
+    private $lado1;
+    private $lado2;
+    private $lado3;
+
+    public function __construct(int $lado1, int $lado2, int $lado3) {
+        $this->lado = $lado1;
+        $this->lado = $lado2;
+        $this->lado = $lado3;
+    }
+
+    public function getArea() {
+        return $area = ($this->lado1 * $this->lado2) / 2;
+    }
+
+    public function getPerimeter() {
+        return $perimeter = $this->lado1 + $this->lado2 + $this->lado3;
+    }
 }
 
 class Square extends formaGeometrica  {
@@ -35,6 +53,19 @@ class Square extends formaGeometrica  {
 
 class Circle extends formaGeometrica  {
 
+    private $radio;
+
+    public function __construct(int $radio) {
+        $this->radio = $radio;
+    }
+
+    public function getArea() {
+        return $area = 3.14 * ($this->radio * $this->radio);
+    }
+
+    public function getPerimeter() {
+        return $perimeter = 2 * 3.14 * $this->radio;
+    }
 }
 
 $triangle = new Triangle(2, 3, 5);
